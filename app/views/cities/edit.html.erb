@@ -1,0 +1,12 @@
+<h1>Edit Cities</h1>
+<%= form_for :city, url: cities_path do |f| %>
+  <p>
+    <%= f.label :city_name %><br>
+    <%= f.text_field :city_name %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<%= link_to 'Back', cities_path %>

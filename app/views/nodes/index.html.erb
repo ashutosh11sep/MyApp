@@ -1,0 +1,22 @@
+<h1>Listing Nodes</h1>
+ <%= link_to 'New node', new_node_path %>
+<table>
+  <tr>
+    <th>Node_name</th>
+    <th>Place_id</th>
+  </tr>
+ 
+  <% @nodes.each do |node| %>
+    <tr>
+      <td><%= node.node_name  %></td>
+      <td><%= node.place_id  %></td>
+      <td><%= link_to 'Show', node_path(node) %></td>
+      <td><%= link_to 'Edit', edit_node_path(node) %></td>
+      <td><%= link_to 'Destroy', node_path(node),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'Back', home_index_path %>

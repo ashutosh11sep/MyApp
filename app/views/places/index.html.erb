@@ -1,0 +1,21 @@
+<h1>Listing Places</h1>
+ <%= link_to 'New place', new_place_path %>
+<table>
+  <tr>
+    <th>Place_name</th>
+    <th>Company_id</th>
+  </tr>
+ 
+  <% @places.each do |place| %>
+    <tr>
+      <td><%= place.place_name  %></td>
+      <td><%= place.company_id  %></td>
+      <td><%= link_to 'Show', place_path(place) %></td>
+      <td><%= link_to 'Edit', edit_place_path(place) %></td>
+      <td><%= link_to 'Destroy', place_path(place),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+
+    </tr>
+  <% end %>
+</table>

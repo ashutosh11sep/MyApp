@@ -1,0 +1,19 @@
+<h1>Edit Nodes</h1>
+<%= form_for :node, url: nodes_path do |f| %>
+  
+
+  <p>
+    <%= f.label :node_name %><br>
+    <%= f.text_field :node_name %>
+  </p>
+
+  <p>
+    <%= f.label :place_id %><br>
+    <%= f.text_field :place_id %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<%= link_to 'Back', nodes_path %>

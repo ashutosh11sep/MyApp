@@ -1,0 +1,13 @@
+<h1>Edit User_roles</h1>
+
+<%= form_for :user_role, url: user_roles_path do |f| %>
+  <p>
+    <%= f.label :role_name %><br>
+    <%= f.text_field :role_name %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<%= link_to 'Back', user_roles_path %>

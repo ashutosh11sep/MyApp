@@ -1,0 +1,12 @@
+<h1>Edit Regions</h1>
+<%= form_for :region, url: regions_path do |f| %>
+  <p>
+    <%= f.label :region_name %><br>
+    <%= f.text_field :region_name %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<%= link_to 'Back', regions_path %>
