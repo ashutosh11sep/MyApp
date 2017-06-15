@@ -1,0 +1,19 @@
+<%= form_for :page, url: pages_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.collection_select :site_id, Site.all, :id, :name, prompt: true %>
+    </p>
+    
+<p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </p>
+
+<p>
+    <%= f.submit %>
+  </p>
+<% end %>

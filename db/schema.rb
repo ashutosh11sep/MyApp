@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170615081934) do
+ActiveRecord::Schema.define(version: 20170615085002) do
 
   create_table "cities", force: :cascade do |t|
     t.string "city_name"
@@ -53,6 +53,14 @@ ActiveRecord::Schema.define(version: 20170615081934) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "pages", force: :cascade do |t|
+    t.string "title"
+    t.integer "site_id"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "places", force: :cascade do |t|
     t.string "place_name"
     t.integer "company_id"
@@ -62,6 +70,13 @@ ActiveRecord::Schema.define(version: 20170615081934) do
 
   create_table "regions", force: :cascade do |t|
     t.string "region_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sites", force: :cascade do |t|
+    t.string "site_url"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

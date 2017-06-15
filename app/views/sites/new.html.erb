@@ -1,0 +1,15 @@
+<%= form_for :site, url: sites_path do |f| %>
+  <p>
+    <%= f.label :site_url %><br>
+    <%= f.text_field :site_url %>
+  </p>
+ 
+  
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+<p>
+    <%= f.submit %>
+  </p>
+<% end %>
