@@ -16,6 +16,15 @@
     <%= f.collection_select :city_id, City.all, :id, :city_name, prompt: true %>
     </p>
 
+<p>
+    <%= f.label :company_image %><br>
+    <%= f.file_field :company_image %>
+  </p>
+
+  <p>
+    <%= f.label :profile_image %><br>
+    <%= f.file_field :profile_image %>
+  </p>
     <p>
     <%= f.label :postcode %><br>
     <%= f.text_field :postcode %>
