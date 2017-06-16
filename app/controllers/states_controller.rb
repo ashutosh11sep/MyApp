@@ -28,6 +28,13 @@ def update
     render 'edit'
   end
 end
+
+def destroy
+  @state = State.find(params[:id])
+  @state.destroy
+ 
+  redirect_to states_path
+end
 private
   def state_params
     params.require(:state).permit(:state_name)

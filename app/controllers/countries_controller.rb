@@ -29,6 +29,13 @@ def update
     render 'edit'
   end
 end
+
+def destroy
+  @country = Country.find(params[:id])
+  @country.destroy
+ 
+  redirect_to countries_path
+end
 private
   def country_params
     params.require(:country).permit(:country_name)

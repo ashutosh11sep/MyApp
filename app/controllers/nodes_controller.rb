@@ -28,6 +28,12 @@ def update
     render 'edit'
   end
 end
+def destroy
+  @node = Node.find(params[:id])
+  @node.destroy
+ 
+  redirect_to nodes_path
+end
 private
   def node_params
     params.require(:node).permit(:node_name, :place_id)

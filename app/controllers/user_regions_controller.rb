@@ -27,7 +27,12 @@ def update
     render 'edit'
   end
 end
-
+def destroy
+  @user_region = UserRegion.find(params[:id])
+  @user_region.destroy
+ 
+  redirect_to user_regions_path
+end
 private
   def user_region_params
     params.require(:user_region).permit(:user_id, :region_id)

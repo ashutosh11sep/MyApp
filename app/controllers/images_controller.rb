@@ -28,6 +28,13 @@ def update
     render 'edit'
   end
 end
+
+def destroy
+  @image = Image.find(params[:id])
+  @image.destroy
+ 
+  redirect_to images_path
+end
 private
   def image_params
     params.require(:image).permit(:user_id, :real_name, :image_name,)

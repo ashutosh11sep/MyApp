@@ -28,6 +28,13 @@ def update
     render 'edit'
   end
 end
+
+def destroy
+  @user_role = UserRole.find(params[:id])
+  @user_role.destroy
+ 
+  redirect_to user_roles_path
+end
 private
   def user_role_params
     params.require(:user_role).permit(:role_name)
